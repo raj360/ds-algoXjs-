@@ -1,0 +1,1 @@
+const  Challenges = require('./challenges');
