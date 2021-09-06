@@ -12,23 +12,26 @@ const lines = [2, 5, 3, 1];
 
 const n = lines.length;
 
-const shortestLineIndex = (lines, n)=> {
-    let shortest = 0;
+const shortestLineIndex = (lines)=> lines.indexOf(Math.min(...lines));
+
+// {
+//     let shortest = 0;
     
-    for(let i=1; i<n; i++) {
-       if (lines[i] < lines[shortest]) {
-           shortest = i;
-       }
-    }
+//     // for(let i=1; i<n; i++) {
+//     //    if (lines[i] < lines[shortest]) {
+//     //        shortest = i;
+//     //    }
+//     // }
     
-    return shortest;
-}
+    
+    
+// }
 
 
 const solution = (lines, n,  m) => {
 
   for (let i = 0; i < m; i++) {
-    let shortest = shortestLineIndex(lines, n);
+    let shortest = shortestLineIndex(lines);
     console.log("\n",lines[shortest]);
     lines[shortest]++;
   }
@@ -37,3 +40,4 @@ const solution = (lines, n,  m) => {
 
 solution(lines,n,m)
 
+console.log(lines)
