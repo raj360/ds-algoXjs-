@@ -1,1 +1,2 @@
-module.export  = {};
+const foodLines = require('./foodLines')
+module.export  = {foodLines};
